@@ -17,8 +17,7 @@ const Control = () => {
     const empty = {
       cards: [
         {
-          image:
-            "https://bicyclecards.org/wp-content/uploads/2019/11/red-56.jpg",
+          image: "//bicyclecards.org/wp-content/uploads/2019/11/red-56.jpg",
         },
       ],
       remaining: 0,
@@ -40,7 +39,7 @@ const Control = () => {
       if (show) {
         console.log("draw deck ran");
         const { data } = await axios.get(
-          `https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1`
+          `//deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1`
         );
         setDeck((deck) => data);
       }
@@ -54,7 +53,7 @@ const Control = () => {
       if (show) {
         console.log("draw deck ran");
         const { data } = await axios.get(
-          `https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1`
+          `//deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1`
         );
         setDeck((deck) => data);
         console.log(deck);
@@ -70,7 +69,7 @@ const Control = () => {
       if (deck.deck_id !== "" && clicked) {
         console.log("draw card ran");
         const { data } = await axios.get(
-          `https://deckofcardsapi.com/api/deck/${deck.deck_id}/draw/?count=1`
+          `//deckofcardsapi.com/api/deck/${deck.deck_id}/draw/?count=1`
         );
         if (data.error) {
           alert("out of cards");
