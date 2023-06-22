@@ -1,7 +1,6 @@
 import Card from "./Card";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { log } from "async";
 
 const Control = () => {
   //inital deck state
